@@ -1,3 +1,5 @@
+const counterE1 = document.querySelector(".counter");
+const counterTitleE1 = document.querySelector(".counter__title");
 const increaseButtonE1 = document.querySelector(".counter__button--increase");
 const decreaseButtonE1 = document.querySelector(".counter__button--decrease");
 const resetButtonE1 = document.querySelector(".counter__reset-button");
@@ -9,6 +11,10 @@ function incrementCounter() {
   let newValue = currentValueAsNumber + 1;
   if (newValue > 5) {
     newValue = 5;
+    counterE1.classList.add("counter--limit");
+    counterTitleE1.innerHTML = "Limit! Buy <b>Pro</b> for >5";
+    increaseButtonE1.disabled = true;
+    decreaseButtonE1.disabled = true;
   }
   counterValueE1.textContent = newValue;
 }
