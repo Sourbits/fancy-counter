@@ -15,9 +15,9 @@ function incrementCounter() {
     counterTitleE1.innerHTML = "Limit! Buy <b>Pro</b> for >5";
     increaseButtonE1.enabled = true;
     decreaseButtonE1.enabled = true;
-    increaseButtonE1.blur();
   }
   counterValueE1.textContent = newValue;
+  increaseButtonE1.blur();
 }
 
 resetButtonE1.addEventListener("click", function () {
