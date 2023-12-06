@@ -20,7 +20,9 @@ decreaseButtonE1.addEventListener("click", function () {
   const currentValue = counterValueE1.textContent;
   const currentValueAsNumber = +currentValue;
   let newValue = currentValueAsNumber - 1;
-
+  if (newValue < 0) {
+    newValue = 0;
+  }
   counterValueE1.textContent = newValue;
 });
 
