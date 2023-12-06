@@ -13,14 +13,18 @@ function incrementCounter() {
     newValue = 5;
     counterE1.classList.add("counter--limit");
     counterTitleE1.innerHTML = "Limit! Buy <b>Pro</b> for >5";
-    increaseButtonE1.disabled = true;
-    decreaseButtonE1.disabled = true;
+    increaseButtonE1.enabled = true;
+    decreaseButtonE1.enabled = true;
   }
   counterValueE1.textContent = newValue;
 }
 
 resetButtonE1.addEventListener("click", function () {
   counterValueE1.textContent = 0;
+  counterE1.classList.remove('counter--limit');
+  counterTitleE1.textContent = 'Fancy Counter';
+  increaseButtonE1.disable = false;
+  decreaseButtonE1.disable = false;
 });
 
 increaseButtonE1.addEventListener("click", incrementCounter);
