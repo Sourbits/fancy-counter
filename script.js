@@ -6,7 +6,10 @@ const counterValueE1 = document.querySelector(".counter__value");
 function incrementCounter() {
   const currentValue = counterValueE1.textContent;
   const currentValueAsNumber = +currentValue;
-  const newValue = currentValueAsNumber + 1;
+  let newValue = currentValueAsNumber + 1;
+  if (newValue > 5) {
+    newValue = 5;
+  }
   counterValueE1.textContent = newValue;
 }
 
