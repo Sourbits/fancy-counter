@@ -15,16 +15,18 @@ function incrementCounter() {
     counterTitleE1.innerHTML = "Limit! Buy <b>Pro</b> for >5";
     increaseButtonE1.enabled = true;
     decreaseButtonE1.enabled = true;
+    increaseButtonE1.blur();
   }
   counterValueE1.textContent = newValue;
 }
 
 resetButtonE1.addEventListener("click", function () {
   counterValueE1.textContent = 0;
-  counterE1.classList.remove('counter--limit');
-  counterTitleE1.textContent = 'Fancy Counter';
+  counterE1.classList.remove("counter--limit");
+  counterTitleE1.textContent = "Fancy Counter";
   increaseButtonE1.disable = false;
   decreaseButtonE1.disable = false;
+  resetButtonE1.blur();
 });
 
 increaseButtonE1.addEventListener("click", incrementCounter);
@@ -37,6 +39,7 @@ decreaseButtonE1.addEventListener("click", function () {
     newValue = 0;
   }
   counterValueE1.textContent = newValue;
+  decreaseButtonE1.blur();
 });
 
 document.addEventListener("keydown", incrementCounter);
